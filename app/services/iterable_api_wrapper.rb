@@ -20,7 +20,6 @@ class IterableApiWrapper
     }
 
     response = post(endpoint, options)
-    debugger
     handle_response(response)
   end
 
@@ -38,7 +37,6 @@ class IterableApiWrapper
     }
 
     response = post(endpoint, options)
-    debugger
     handle_response(response)
   end
 
