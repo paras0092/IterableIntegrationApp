@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.iterable.com/api/events/track
+    body:
+      encoding: UTF-8
+      string: '{"userId":"123","eventName":"EventB","data":{"custom_property":"some_value"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 28 Feb 2024 09:14:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '119'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin,Accept-Encoding
+      Request-Time:
+      - '0'
+      Server:
+      - iterable-ingress aaa7
+      X-Upstream:
+      - high_traffic
+    body:
+      encoding: ASCII-8BIT
+      string: '{"msg":"No API key found on request","code":"BadApiKey","params":{"ip":"223.233.71.27","endpoint":"/api/events/track"}}'
+  recorded_at: Wed, 28 Feb 2024 09:14:16 GMT
+- request:
+    method: post
+    uri: https://api.iterable.com/api/email/target
+    body:
+      encoding: UTF-8
+      string: '{"userId":"123","templateId":"YOUR_EMAIL_TEMPLATE_ID"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 28 Feb 2024 09:14:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '119'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin,Accept-Encoding
+      Request-Time:
+      - '1'
+      Server:
+      - iterable-ingress 49de
+      X-Upstream:
+      - low_traffic
+    body:
+      encoding: ASCII-8BIT
+      string: '{"msg":"No API key found on request","code":"BadApiKey","params":{"ip":"223.233.71.27","endpoint":"/api/email/target"}}'
+  recorded_at: Wed, 28 Feb 2024 09:14:17 GMT
+recorded_with: VCR 6.2.0
